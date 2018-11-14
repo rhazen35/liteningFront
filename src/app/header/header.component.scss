@@ -1,0 +1,43 @@
+@import '../../scss/styles.scss';
+
+.header {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    height:5rem;
+    font-family: 'Poppins', sans-serif;
+    color: $white;
+    background: $blueberry;
+    border-bottom: 1px solid $blueberry;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(112,112,112,1);
+    box-shadow: 0px 1px 5px 0px rgba(112,112,112,1);
+
+    .page-icon {
+        grid-column: 1/1;
+        grid-row: 1;
+    }
+
+    .page-icon i {
+        line-height:5rem;
+        padding-left: 1rem;
+        font-weight:900;
+        font-size:250%;
+    }
+
+    .page-title {
+        grid-column: 3/5;
+        grid-row: 1;
+        text-align:center;
+
+        .title {
+            font-weight:900;
+            font-size:125%;
+            line-height:3rem;
+        }
+
+        .subtitle {
+            font-weight:700;
+            font-size:90%;
+        }
+    }
+}
