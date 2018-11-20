@@ -1,0 +1,23 @@
+@import '../../../scss/styles.scss';
+
+footer {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    height:2rem;
+    width:100%;
+    line-height:2rem;
+    padding:1rem;
+    border-top: 1px solid $blueberry;
+
+    i {
+        padding-right:0.5rem;
+    }
+
+    span {
+        font-size:90%;
+    }
+}

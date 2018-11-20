@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,7 +17,7 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'work', component: HomeComponent },
   { path: 'qualities', component: HomeComponent },
-  { path: 'contact', component: HomeComponent }
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
@@ -24,7 +26,9 @@ const appRoutes: Routes = [
     HeaderComponent,
     MenuComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     RouterModule.forRoot(

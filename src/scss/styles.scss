@@ -4,7 +4,10 @@
 /* Grid */
 @import './layout/grid';
 
-/* Grid */
+/* Page */
+@import './layout/page';
+
+/* Animations */
 @import './animations/animations';
 
 
@@ -41,4 +44,9 @@ body {
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+      text-decoration: none;
+      color: $black;
   }

@@ -5,6 +5,7 @@
     grid-template-columns: 20% 30% 30% 20%;
     grid-gap: 2rem;
     height:100%;
+    margin-top: 5%;
 
     .title {
         color: $black;
@@ -27,8 +28,9 @@
 
         .link {
             float:right;
-            margin-top: 0.5rem;
-            padding: 0.25rem 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            text-transform: uppercase;
             border: 1px solid $black;
             transition: all .2s;
 

@@ -12,19 +12,19 @@
     -moz-box-shadow: 0px 1px 5px 0px rgba(112,112,112,1);
     box-shadow: 0px 1px 5px 0px rgba(112,112,112,1);
 
-    .page-icon {
+    .header-icon {
         grid-column: 1/1;
         grid-row: 1;
     }
 
-    .page-icon i {
+    .header-icon i {
         line-height:5rem;
         padding-left: 1rem;
         font-weight:900;
         font-size:250%;
     }
 
-    .page-title {
+    .header-title {
         grid-column: 3/5;
         grid-row: 1;
         text-align:center;
