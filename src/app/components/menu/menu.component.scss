@@ -1,4 +1,4 @@
-@import '../../scss/styles.scss';
+@import '../../../scss/styles.scss';
 
 .menu {
     position:fixed;
@@ -19,8 +19,8 @@
         .icon {
             float:right;
             position: relative;
-            width: 45px;
-            height: 30px;
+            width: 40px;
+            height: 25px;
             margin-right:2rem;
             transform: rotate(0deg);
             transition: .5s ease-in-out;
@@ -45,15 +45,15 @@
         }
         
         .icon span:nth-child(2) {
-            top: 14px;
+            top: 11px;
         }
         
         .icon span:nth-child(3) {
-            top: 28px;
+            top: 22px;
         }
         
         .icon.open span:nth-child(1) {
-            top: 14px;
+            top: 10px;
             transform: rotate(135deg);
         }
         
@@ -63,12 +63,12 @@
         }
         
         .icon.open span:nth-child(3) {
-            top: 14px;
+            top: 11px;
             transform: rotate(-135deg);
         }
         
         .icon.open span:nth-child(1) {
-            top: 14px;
+            top: 11px;
             transform: rotate(135deg);
         }
         
@@ -78,7 +78,7 @@
         }
         
         .icon.open span:nth-child(3) {
-            top: 14px;
+            top: 11px;
             transform: rotate(-135deg);
         }
     }

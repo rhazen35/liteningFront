@@ -1,9 +1,10 @@
-@import '../../scss/styles.scss';
+@import '../../../scss/styles.scss';
 
 .main {
     display:grid;
     grid-template-columns: 20% 30% 30% 20%;
     grid-gap: 2rem;
+    height:100%;
 
     .title {
         color: $black;
@@ -26,6 +27,7 @@
 
         .link {
             float:right;
+            margin-top: 0.5rem;
             padding: 0.25rem 0.5rem;
             border: 1px solid $black;
             transition: all .2s;
