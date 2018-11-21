@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Renderer2, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  mailIcon = "mail";
 
   ngOnInit() {
+  }
+
+  mailEnter() {
+    this.mailIcon = "drafts";
+  }
+
+  mailLeave() {
+    this.mailIcon = "mail";
   }
 
 }

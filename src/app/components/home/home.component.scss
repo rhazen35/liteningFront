@@ -1,110 +1,115 @@
 @import '../../../scss/styles.scss';
 
-.main {
-    display:grid;
-    grid-template-columns: 20% 30% 30% 20%;
-    grid-gap: 2rem;
-    height:100%;
-    margin-top: 5%;
+.home {
 
-    .title {
-        color: $black;
-        font-family: 'Poppins', sans-serif;
-        font-weight:900;
-        font-size:150%;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    
-    .text {
+    .main {
+        display:grid;
+        grid-template-columns: 20% 30% 30% 20%;
+        grid-gap: 2rem;
+        height:100%;
+        margin-top:2%;
 
-        p {
-            margin-top:1rem;
-            text-align: left;
-            font-family: 'Questrial', sans-serif;
-            font-size:100%;
-            font-weight:500;
-        }
-
-        .link {
-            float:right;
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
+        .title {
+            color: $white;
+            font-family: 'Poppins', sans-serif;
+            font-weight:900;
+            font-size:150%;
             text-transform: uppercase;
-            border: 1px solid $black;
-            transition: all .2s;
+            text-align: center;
+        }
+        
+        .text {
 
-            &:hover {
-                cursor: pointer;
+            p {
+                margin-top:1rem;
+                text-align: left;
+                font-family: 'Questrial', sans-serif;
+                font-size:100%;
+                font-weight:500;
                 color: $white;
-                background: $softBlack;
+                line-height:1.25rem;
+            }
+
+            .link {
+                float:right;
+                margin-top: 1rem;
+                margin-left: 0.25rem;
+                padding: 0.5rem 1rem;
+                text-transform: uppercase;
+                color: $white;
+                background: $JAPANESE_INDIGO;
+                transition: all .2s;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                    background: $PERSIAN_GREEN;
+                }
             }
         }
-    }
-
-    img {
-        max-width:100%;
-        max-height:100%;
-    }
-
-    .developer {
-        grid-column: 2/3;
-        grid-row: 1;
-        padding:1rem 3rem;
-        border-bottom: 1px solid $lightgrey;
-        border-right: 1px solid $lightgrey;
-        box-shadow: 2px 2px 3px 0px rgba(229,230,230,1);
-
-        .text p {
-            text-align: right;
-        }
-    }
-    
-    .developer-image {
-        grid-column: 3/4;
-        grid-row: 1;
 
         img {
-            box-shadow: -2px 2px 3px 0px rgb(166, 166, 166);
+            max-width:100%;
+            max-height:100%;
         }
-    }
 
-    .intro {
-        grid-column: 3/4;
-        grid-row: 2;
-        padding:1rem 3rem;
-        background: $teal;
-        box-shadow: -2px 2px 3px 0px rgba(123, 209, 200,1);
-    }
-    
-    .intro-image {
-        grid-column: 2/3;
-        grid-row: 2;
-        text-align:right;
+        .developer {
+            grid-column: 2/3;
+            grid-row: 1;
+            padding:2rem;
+            color: $white;
+            border-bottom: 1px solid $grey;
+            border-right: 1px solid $grey;
+
+            .title,
+            .text p {
+                text-align: right;
+            }
+        }
         
-        img {
-            box-shadow: 2px 2px 3px 0px rgba(0, 153, 138,1);
+        .developer-image {
+            grid-column: 3/4;
+            grid-row: 1;
         }
-    }
 
-    .content {
-        grid-column: 2/3;
-        grid-row: 3;
-        padding:1rem 3rem;
-        background: $cyan;
-        box-shadow: 2px -2px 3px 0px rgba(143, 196, 240,1);
-    }
+        .intro {
+            grid-column: 3/4;
+            grid-row: 2;
+            padding:2rem;
+            border-top: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+            border-left: 1px solid $grey;
 
-    .content-image {
-        grid-column: 3/4;
-        grid-row: 3;
-        text-align:left;
+            .title,
+            .text p {
+                text-align: left;
+            }
+        }
         
-        img {
-            padding: 1rem;
-            border-top: 1px solid $lightgrey;
-            border-left: 1px solid $lightgrey;
-            box-shadow: -2px -2px 3px 0px rgba(229,230,230,1);
+        .intro-image {
+            grid-column: 2/3;
+            grid-row: 2;
+            text-align:right;
+        }
+
+        .content {
+            grid-column: 2/3;
+            grid-row: 3;
+            padding:2rem;
+            background: $JET;
+            border-top: 1px solid $grey;
+            border-right: 1px solid $grey;
+
+            .title,
+            .text p {
+                text-align: right;
+            }
+        }
+
+        .content-image {
+            grid-column: 3/4;
+            grid-row: 3;
+            text-align:left;
         }
     }
 }

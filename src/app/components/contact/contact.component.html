@@ -1,6 +1,6 @@
 <div class="contact">
 
-  <div class="page-title">Contact</div>
+  <div class="page-title"><span>Contact</span></div>
 
   <div class="information">
 
@@ -9,9 +9,13 @@
         <div class="content">Ruben Hazenbosch</div>
     </div>
 
-    <div class="block email">
-        <div class="header"><i class="material-icons">email</i></div>
+    <div class="block email" (mouseenter)='mailEnter()' (mouseleave)='mailLeave()'>
+        <div class="header"><i class="material-icons">{{ mailIcon }}</i></div>
         <div class="content">rhazen35@gmail.com</div>
+
+        <form>
+            
+        </form>
     </div>
 
     <div class="block phone">
