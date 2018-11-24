@@ -1,0 +1,40 @@
+@import '../../../../scss/styles.scss';
+
+form {
+
+    display:flex;
+    flex-flow:column;
+    justify-content: flex-start;
+    color: $black;
+    background: $white;
+
+    label {
+
+        display:flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        padding:1rem;
+
+        div {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+
+            span {
+                padding-left:0.25rem;
+            }
+        }
+
+        input {
+        }
+
+        textarea {
+            height:5rem;
+            margin-top:0.25rem;
+            padding:0.5rem;
+            border: 1px solid $lightgrey;
+            border-radius:4px;
+            resize: vertical;
+        }
+    }
+}

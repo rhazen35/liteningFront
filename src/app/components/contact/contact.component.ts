@@ -1,4 +1,4 @@
-import { Component, Renderer2, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +8,8 @@ import { Component, Renderer2, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   mailIcon = "mail";
+
+  constructor() {}
 
   ngOnInit() {
   }

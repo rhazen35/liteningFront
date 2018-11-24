@@ -1,0 +1,26 @@
+<form [formGroup]="mailForm">
+  
+  <label>
+    <mat-form-field>
+        <mat-icon matPrefix>face</mat-icon>
+      <input matInput type="text" formControlName="sender" tabindex="1" placeholder=" Your email adress">
+    </mat-form-field>
+  </label>
+
+  <label>
+    <div>
+      <i class="material-icons">subject</i>
+      <span>Subject:</span>
+    </div>
+    <input type="text" formControlName="subject">
+  </label>
+
+  <label>
+    <div>
+      <i class="material-icons">message</i>
+      <span>Message:</span>
+    </div>
+    <textarea formControlName="message"></textarea>
+  </label>
+
+</form>
