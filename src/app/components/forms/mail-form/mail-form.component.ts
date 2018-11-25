@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-// Material Form Components
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
-
 @Component({
   selector: 'app-mail-form',
   templateUrl: './mail-form.component.html',

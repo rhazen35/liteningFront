@@ -47,6 +47,10 @@
             border-left: 1px solid $lightgrey;
             border-bottom: 1px solid $lightgrey;
             border-right: 1px solid $lightgrey;
+
+            &:hover /deep/ form {
+                height:400px;
+            }
         }
 
         .phone {
