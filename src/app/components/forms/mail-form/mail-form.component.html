@@ -8,19 +8,17 @@
   </label>
 
   <label>
-    <div>
-      <i class="material-icons">subject</i>
-      <span>Subject:</span>
-    </div>
-    <input type="text" formControlName="subject">
+    <mat-form-field>
+      <mat-icon matPrefix>subject</mat-icon>
+      <input matInput type="text" formControlName="subject" tabindex="2" placeholder=" Subject">
+    </mat-form-field>
   </label>
 
   <label>
-    <div>
-      <i class="material-icons">message</i>
-      <span>Message:</span>
-    </div>
-    <textarea formControlName="message"></textarea>
+    <mat-form-field>
+      <mat-icon matPrefix>message</mat-icon>
+      <textarea matInput formControlName="message" tabindex="3" placeholder=" Leave a message"></textarea>
+    </mat-form-field>
   </label>
 
 </form>

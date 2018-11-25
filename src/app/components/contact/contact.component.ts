@@ -9,6 +9,8 @@ export class ContactComponent implements OnInit {
 
   mailIcon = "mail";
 
+  show: boolean = true;
+
   constructor() {}
 
   ngOnInit() {
@@ -21,5 +23,4 @@ export class ContactComponent implements OnInit {
   mailLeave() {
     this.mailIcon = "mail";
   }
-
 }

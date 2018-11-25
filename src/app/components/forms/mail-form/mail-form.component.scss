@@ -5,6 +5,7 @@ form {
     display:flex;
     flex-flow:column;
     justify-content: flex-start;
+    padding:0.5rem;
     color: $black;
     background: $white;
 
@@ -25,15 +26,8 @@ form {
             }
         }
 
-        input {
-        }
-
         textarea {
             height:5rem;
-            margin-top:0.25rem;
-            padding:0.5rem;
-            border: 1px solid $lightgrey;
-            border-radius:4px;
             resize: vertical;
         }
     }
