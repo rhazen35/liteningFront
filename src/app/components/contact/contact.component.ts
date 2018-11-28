@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  mailIcon = "mail";
+  public mailIcon:string = "mail";
 
   constructor() {}
 
@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
 
   mailEnter() {
     this.mailIcon = "drafts";
+
   }
 
   mailLeave() {

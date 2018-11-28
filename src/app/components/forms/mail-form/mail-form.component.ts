@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-mail-form',
@@ -9,14 +9,57 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class MailFormComponent implements OnInit {
 
   mailForm = new FormGroup({
-    sender: new FormControl(''),
-    subject: new FormControl(''),
-    message: new FormControl(''),
+    sender: new FormControl(
+      '', 
+      [
+        Validators.required,
+        Validators.email
+      ]
+    ),
+    subject: new FormControl(
+      '', 
+      [
+        Validators.required,
+        Validators.minLength(4),
+        Validators.maxLength(100)
+      ]
+      ),
+    message: new FormControl(
+      '', 
+      [
+        Validators.required,
+        Validators.minLength(4),
+        Validators.maxLength(500)
+      ]
+    ),
   });
+
+  submitted = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSubmit() { 
+    this.submitted = true; 
+  }
+
+  getSenderErrorMessage() {
+    return this.mailForm.get('sender').hasError('required') ? 'You must enter a value' :
+        this.mailForm.get('sender').hasError('email') ? 'Not a valid email' :
+            '';
+  }
+
+  getSubjectErrorMessage() {
+    return this.mailForm.get('subject').hasError('required') ? 'You must enter a value' :
+        this.mailForm.get('subject').value.length < 4 ? 'Minimum length: 4 charaters' :
+          this.mailForm.get('subject').value.length > 100 ? 'Maximum length: 100 charaters' : '';
+  }
+
+  getMessageErrorMessage() {
+    return this.mailForm.get('message').hasError('required') ? 'You must enter a value' : 
+        this.mailForm.get('message').value.length < 4 ? 'Minimum length: 4 charaters' :
+          this.mailForm.get('message').value.length > 500 ? 'Maximum length: 500 charaters' : '';
+  }
 }

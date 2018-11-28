@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Event, NavigationStart, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,17 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
 
-  ngOnInit() {
+    this.router.events.subscribe( (event: Event) => {
+
+      if (event instanceof NavigationStart) {
+        
+          let menuLink = document.getElementById('menu-icon');
+
+          if (menuLink.classList.contains("open")) {
+            this.toggleMenu(event);
+          }
+      }
+
+      if (event instanceof NavigationEnd) {
+          
+      }
+    });
   }
 
-  toggleMenu() {
-    let icon      = document.getElementById("menu-icon");
+  ngOnInit() {}
+
+  toggleMenu(event) {
+
+    let menuLink  = document.getElementById('menu-icon');
     let menuItems = document.getElementById("menu-items");
 
-    icon.classList.toggle("open");
-    icon.title = "Close the menu." === icon.title ? "Open the menu." : "Close the menu.";
+    menuLink.classList.toggle("open");
+    menuLink.title = "Close the menu." === menuLink.title ? "Open the menu." : "Close the menu.";
 
     menuItems.classList.toggle("animate-left-cubic-superfast");
     menuItems.style.gridColumn = menuItems.style.gridColumn === "1 / auto" ? "3 / auto" : "1 / auto";

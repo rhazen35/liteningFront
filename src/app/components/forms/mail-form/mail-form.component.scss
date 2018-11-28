@@ -5,11 +5,10 @@ form {
     display:flex;
     flex-flow:column;
     justify-content: flex-start;
-    height:0;
+    height:auto;
+    padding:1rem;
     color: $black;
     background: $white;
-    transition: all 1s cubic-bezier(0, 1, 0.5, 1);
-    overflow: hidden;
 
     label {
 
@@ -32,5 +31,14 @@ form {
             height:5rem;
             resize: vertical;
         }
+    }
+
+    button {
+        margin-left:auto;
+    }
+
+    button:hover {
+        color:#ffffff;
+        background: $DARK_SLATE_BLUE;
     }
 }
