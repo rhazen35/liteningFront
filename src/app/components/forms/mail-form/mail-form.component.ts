@@ -1,11 +1,21 @@
+import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MailServerModule } from '../../../modules/email/server/server.module';
 
 @Component({
   selector: 'app-mail-form',
   templateUrl: './mail-form.component.html',
   styleUrls: ['./mail-form.component.scss']
 })
+
+@NgModule({
+  imports: [
+    MailServerModule
+  ],
+  declarations: [],
+})
+
 export class MailFormComponent implements OnInit {
 
   mailForm = new FormGroup({
@@ -36,13 +46,19 @@ export class MailFormComponent implements OnInit {
 
   submitted = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
 
   onSubmit() { 
+
     this.submitted = true; 
+
+    if (this.mailForm.valid) {
+
+      
+    }
   }
 
   getSenderErrorMessage() {
