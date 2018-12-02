@@ -1,8 +1,14 @@
 <div class="header">
 
-  <div class="header-icon"><i class="fas fa-bolt"></i></div>
+  <div class="header-icon">
+    <a class="link" routerLink="/home" routerLinkActive="active" title="Go to Home.">
+      <i class="material-icons">flash_on</i>
+    </a>
+  </div>
 
   <div class="header-title">
-      <div class="title">{{ title}}</div>
+      <div class="title">
+          <a class="link" routerLink="/home" routerLinkActive="active" title="Go to Home.">{{ title}}</a>
+      </div>
   </div>
 </div>

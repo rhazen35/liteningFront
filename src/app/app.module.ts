@@ -16,9 +16,13 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { QualitiesComponent } from './components/qualities/qualities.component';
 
 // Form components
 import { MailFormComponent } from './components/forms/mail-form/mail-form.component';
+
+// Google Maps
+import { AgmCoreModule } from '@agm/core';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,7 +30,7 @@ const appRoutes: Routes = [
   { path: 'demo', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'work', component: HomeComponent },
-  { path: 'qualities', component: HomeComponent },
+  { path: 'qualities', component: QualitiesComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
@@ -39,7 +43,8 @@ const appRoutes: Routes = [
     AboutComponent,
     FooterComponent,
     ContactComponent,
-    MailFormComponent
+    MailFormComponent,
+    QualitiesComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -52,6 +57,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     MaterialModule,
     MatNativeDateModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC1HpI1Q7GPh53fT8i_8b5ol430DusRevk'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

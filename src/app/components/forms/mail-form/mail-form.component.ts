@@ -57,7 +57,7 @@ export class MailFormComponent implements OnInit {
 
     if (this.mailForm.valid) {
 
-      
+      // TODO: Send message.
     }
   }
 

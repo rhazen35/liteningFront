@@ -1,0 +1,25 @@
+@import '../../../scss/styles.scss';
+
+.qualities {
+    
+    .subtitle {
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        color: $white;
+        height:3rem;
+        margin-top:2%;
+        padding:1rem;
+
+        i {
+            font-size: 38px;
+        }
+
+        span {
+            padding-left:0.25rem;
+            line-height:3rem;
+            font-size: 150%;
+        }
+    }
+}

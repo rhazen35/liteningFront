@@ -91,6 +91,39 @@
             border-left: 1px solid $lightgrey;
             border-top: 1px solid $lightgrey;
             border-right: 1px solid $lightgrey;
+
+            .content {
+
+                agm-map {
+                    height: 600px;
+
+                    .info-window {
+                        color: $black;
+
+                        .title {
+                            display:flex;
+                            flex-flow: row wrap;
+                            justify-content: flex-start;
+                            height:1.5rem;
+                            line-height:1.5rem;
+                            padding:0.5rem;
+                            font-weight:700;
+                            color: $white;
+                            background: $DARK_SLATE_BLUE;
+                        }
+
+                        .adress {
+                            margin-top:0.25rem;
+                            padding:0.25rem;
+                            border: 1px solid $DARK_SLATE_BLUE;
+                        }
+
+                        .owner {
+                            margin-top:0.25rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -20,6 +20,10 @@
     .header-icon {
         grid-column: 1/1;
         grid-row: 1;
+
+        a {
+            color: $white;
+        }
     }
 
     .header-icon i {
@@ -38,6 +42,10 @@
             font-weight:900;
             font-size:125%;
             line-height:5rem;
+
+            a {
+                color: $white;
+            }
         }
 
         .subtitle {
