@@ -3,9 +3,10 @@
 .header {
     z-index:10000;
     position:fixed;
-    display:grid;
-    grid-template-columns: repeat(6, 1fr);
-    height:5rem;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height:3.75rem;
     width:100%;
     top:0;
     left:0;
@@ -18,39 +19,34 @@
     box-shadow: 0px 1px 5px 0px rgba(112,112,112,1);
 
     .header-icon {
-        grid-column: 1/1;
-        grid-row: 1;
-
+    
         a {
             color: $white;
         }
     }
 
     .header-icon i {
-        line-height:5rem;
+        line-height:4rem;
         padding-left: 1rem;
         font-weight:900;
-        font-size:250%;
+        font-size:200%;
     }
 
     .header-title {
-        grid-column: 3/5;
-        grid-row: 1;
         text-align:center;
 
         .title {
-            font-weight:900;
-            font-size:125%;
-            line-height:5rem;
+            line-height:4rem;
+            font-size:100%;
 
             a {
                 color: $white;
             }
         }
+    }
 
-        .subtitle {
-            font-weight:700;
-            font-size:90%;
-        }
+    app-menu {
+        margin-left:auto;
+        padding-right:1rem;
     }
 }

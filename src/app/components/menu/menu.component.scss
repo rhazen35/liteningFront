@@ -1,34 +1,19 @@
 @import '../../../scss/styles.scss';
 
 .menu {
-    position:fixed;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 1rem;
-    width:45rem;
-    top:6.5rem;
-    right: -30rem;
+    margin-left:auto;
     z-index:10000;
     font-family: 'Poppins', sans-serif;
 
     .link {
-        grid-column: 1;
-        grid-row: 1; 
+        clear:both;
+        float:right;
         width:100%;
 
-        .title {
-            margin-right:2.2rem;
-            text-align:right;
-            color:#ffffff;
-        }
-
         .icon {
-            float:right;
-            position: relative;
-            width: 47px;
-            height: 28px;
-            margin-top:0.5rem;
-            margin-right:2rem;
+            width: 40px;
+            height: 22px;
+            margin-top:1.25rem;
             transform: rotate(0deg);
             transition: .5s ease-in-out;
             cursor: pointer;
@@ -41,30 +26,30 @@
         .icon span {
             display: block;
             position: absolute;
-            height: 6px;
+            height: 0.05rem;
             width: 100%;
-            background: $grey;
-            border-radius: 9px;
+            background: $white;
             opacity: 1;
             left: 0;
             transform: rotate(0deg);
             transition: .25s ease-in-out;
+            border:1px solid $white;
         }
         
         .icon span:nth-child(1) {
-            top: 0px;
+            top: 0rem;
         }
         
         .icon span:nth-child(2) {
-            top: 14px;
+            top: 0.7rem;
         }
         
         .icon span:nth-child(3) {
-            top: 28px;
+            top: 1.4rem;
         }
         
         .icon.open span:nth-child(1) {
-            top: 14px;
+            top: 1rem;
             transform: rotate(135deg);
         }
         
@@ -74,12 +59,12 @@
         }
         
         .icon.open span:nth-child(3) {
-            top: 14px;
+            top: 0.5rem;
             transform: rotate(-135deg);
         }
         
         .icon.open span:nth-child(1) {
-            top: 14px;
+            top: 0.5rem;
             transform: rotate(135deg);
         }
         
@@ -89,38 +74,30 @@
         }
         
         .icon.open span:nth-child(3) {
-            top: 14px;
+            top: 0.5rem;
             transform: rotate(-135deg);
         }
     }
 
     .items {
-        grid-column: 3;
-        grid-row: 3;
-        display:grid;
-        grid-template-columns: 100%;
-        grid-row-gap: 0.25rem;
-        margin-top:0.13rem;
-    
+        position: fixed;
+        top:5rem;
+        right:-30rem;
+        width:15rem;
+
         .item {
-            display: grid;
-            grid-template-columns: 25% 75%;
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
             height:2rem;
             padding: 0.5rem 1rem;
-            padding-right:-1rem;
+            padding-right: 1rem;
             color: $white;
             text-transform: uppercase;
             background: $DARK_SLATE_BLUE;
             border:1px solid $DARK_SLATE_BLUE;
             border-right:none;
-            transition: all .2s ease-in-out;
-            
-            &:hover {
-                padding-right: 2rem;
-                cursor: pointer;
-                color: $DARK_SLATE_BLUE;
-                background: $white;
-            }
+            transition: all .1s ease-in-out;
     
             .icon i {
                 line-height:2rem;
@@ -140,4 +117,8 @@
             background: $white;
         }
     }
+
+    .menu-right-position {
+        right:0;
+    } 
 }

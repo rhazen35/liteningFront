@@ -38,7 +38,6 @@ export class MenuComponent implements OnInit {
     menuLink.title = "Close the menu." === menuLink.title ? "Open the menu." : "Close the menu.";
 
     menuItems.classList.toggle("animate-left-cubic-superfast");
-    menuItems.style.gridColumn = menuItems.style.gridColumn === "1 / auto" ? "3 / auto" : "1 / auto";
+    menuItems.classList.toggle("menu-right-position");
   }
-
 }
