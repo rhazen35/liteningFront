@@ -9,6 +9,7 @@
         clear:both;
         float:right;
         width:100%;
+        margin-right: 0.5rem;
 
         .icon {
             width: 40px;
@@ -99,6 +100,12 @@
             border-right:none;
             transition: all .1s ease-in-out;
     
+            &:hover {
+                cursor:pointer;
+                color: $DARK_SLATE_BLUE;
+                background: $white;
+            }
+
             .icon i {
                 line-height:2rem;
                 font-size:150%;
