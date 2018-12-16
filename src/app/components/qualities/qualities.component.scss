@@ -1,15 +1,15 @@
 @import '../../../scss/styles.scss';
 
 .qualities {
-    
-    .subtitle {
+    color: $white;
+    margin-bottom:6rem;
 
+    .subtitle {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        color: $white;
         height:3rem;
-        margin-top:2%;
+        margin-top:3rem;
         padding:1rem;
 
         i {
@@ -19,7 +19,66 @@
         span {
             padding-left:0.25rem;
             line-height:3rem;
-            font-size: 150%;
+        }
+    }
+    .areas {
+        display: flex;
+        flex-flow:column;
+        justify-content: flex-start;
+
+        @media (min-width:320px) and (max-width:961px) {width:90%;}
+        @media (min-width:961px) {width:70%;}
+
+        margin: 0 auto;
+
+        .area {
+            display: flex;
+            flex-flow:row wrap;
+            justify-content: flex-start;
+            height:3rem;
+            padding:0.25rem;
+            font-size:90%;
+            border-bottom: 1px solid darken($grey, 30%);
+
+            .title {
+                flex:2;
+                display: flex;
+                flex-flow:row wrap;
+                justify-content: space-between;
+                margin-right:1rem;
+
+                .image {
+                    flex:1;
+                    width:50%;
+
+                    img {
+                        max-width:100%;
+                        max-height:100%;
+                    }
+                }
+
+                .subject {
+                    flex:1;
+                    width:50%;
+                    line-height:3rem;
+                    padding-left:0.25rem;
+                    color: $grey;
+                }
+            }
+
+            .rankings {
+                flex:5;
+                display: flex;
+                flex-flow:row wrap;
+                justify-content: flex-start;
+
+                .ranking {
+                    flex:1;
+                    height:3rem;
+                    line-height:3.75rem;
+                    text-align:center;
+                }
+            }
         }
     }
 }

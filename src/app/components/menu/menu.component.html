@@ -10,11 +10,11 @@
   </div>
 
   <div class="items" id="menu-items">
-      <div class="item menu-item" 
+      <div class="item menu-item active" 
            id="menu-home" 
            routerLink="/home" 
            routerLinkActive="active"  
-           (hover)="toggleMenuHover($event)">
+           (click)="toggleMenuActive($event)">
 
           <div class="icon"><i class="material-icons">home</i></div>
           <div class="text">Home</div>
@@ -22,7 +22,8 @@
       <div class="item menu-item" 
            id="menu-demo" 
            routerLink="/demo" 
-           routerLinkActive="active">
+           routerLinkActive="active"
+           (click)="toggleMenuActive($event)">
 
           <div class="icon"><i class="material-icons">play_arrow</i></div>
           <div class="text">Demo</div>
@@ -30,7 +31,8 @@
       <div class="item menu-item" 
            id="menu-about" 
            routerLink="/about" 
-           routerLinkActive="active">
+           routerLinkActive="active"
+           (click)="toggleMenuActive($event)">
 
           <div class="icon"><i class="material-icons">face</i></div>
           <div class="text">About Me</div>
@@ -38,7 +40,8 @@
       <div class="item menu-item" 
            id="menu-work" 
            routerLink="/work" 
-           routerLinkActive="active">
+           routerLinkActive="active"
+           (click)="toggleMenuActive($event)">
 
           <div class="icon"><i class="material-icons">work</i></div>
           <div class="text">My Work</div>
@@ -46,7 +49,8 @@
       <div class="item menu-item" 
            id="menu-qualities" 
            routerLink="/qualities" 
-           routerLinkActive="active">
+           routerLinkActive="active"
+           (click)="toggleMenuActive($event)">
 
           <div class="icon"><i class="material-icons">equalizer</i></div>
           <div class="text">Qualities</div>
@@ -54,7 +58,8 @@
       <div class="item menu-item" 
            id="menu-contact" 
            routerLink="/contact" 
-           routerLinkActive="active">
+           routerLinkActive="active"
+           (click)="toggleMenuActive($event)">
 
           <div class="icon"><i class="material-icons">email</i></div>
           <div class="text">Contact</div>

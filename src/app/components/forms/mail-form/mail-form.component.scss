@@ -6,16 +6,27 @@ form {
     flex-flow:column;
     justify-content: flex-start;
     height:auto;
-    padding:1rem;
     color: $black;
+    font-size:90%;
     background: $white;
 
-    label {
+    @media (min-width:320px) and (max-width:961px) {
+        padding:0.25rem;
+        font-size:90%;
+    }
+    @media (min-width:961px) {padding:1rem;}
 
+    label {
         display:flex;
         flex-flow: column;
         justify-content: flex-start;
-        padding:1rem;
+
+        @media (min-width:320px) and (max-width:961px) {
+            margin-top:1rem;
+            padding:0.25rem;
+            font-size:90%;
+        }
+        @media (min-width:961px) {padding:1rem;}
 
         div {
             display:flex;
@@ -35,6 +46,10 @@ form {
 
     button {
         margin-left:auto;
+
+        @media (min-width:320px) and (max-width:961px) {
+            font-size:90%;
+        }
     }
 
     button:hover {

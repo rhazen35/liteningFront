@@ -20,15 +20,16 @@ export class MenuComponent implements OnInit {
             this.toggleMenu(event);
           }
       }
-
-      if (event instanceof NavigationEnd) {
-          
-      }
     });
   }
 
   ngOnInit() {}
 
+  /**
+   * Toggle the menu (open and close).
+   * 
+   * @param event
+   */
   toggleMenu(event) {
 
     let menuLink  = document.getElementById('menu-icon');
@@ -39,5 +40,24 @@ export class MenuComponent implements OnInit {
 
     menuItems.classList.toggle("animate-left-cubic-superfast");
     menuItems.classList.toggle("menu-right-position");
+  }
+
+  /**
+   * Toggle the menu active state.
+   * 
+   * @param event
+   */
+  toggleMenuActive(event) {
+
+    let items = document.getElementsByClassName('menu-item');
+
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].classList.contains('active')) {
+        items[i].classList.remove('active');
+        break;
+      }
+    }
+
+    event.target.parentElement.classList.add('active');
   }
 }

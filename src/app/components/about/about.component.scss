@@ -1,0 +1,79 @@
+@import '../../../scss/styles.scss';
+
+.about {
+
+    .subtitle {
+        display:flex;
+        flex-flow: column;
+        justify-content: center;
+        margin-top:6rem;
+        color: $white;
+
+        .name {
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:center;
+
+            margin-left:1rem;
+            font-size:150%;
+            text-align:center;
+            height:2rem;
+
+            span {
+                line-height:2rem;
+                padding-left:0.25rem;
+                font-family: 'Bungee Inline', cursive;
+            }
+
+            i {
+                font-size: 28px;
+            }
+        }
+
+        .profession {
+            text-align:center;
+            padding-left:3.25rem;
+            font-family: 'Petit Formal Script', cursive;
+            color: $grey;
+            font-size:110%;
+        }
+    }
+
+    .stories {
+
+        display:flex;
+        flex-flow: row column;
+        justify-content: flex-start;
+        width:80%;
+        margin: 0 auto;
+        margin-top:3rem;
+        color: $white;
+
+        .story {
+
+            .title {
+                font-family: 'Bungee Inline', cursive;
+                font-size:110%;
+            }
+
+            .text {
+                margin-top:1rem;
+
+                p {
+                    margin-top:1rem;
+
+                    span {
+                        padding-right:0.5rem;
+                        font-family: 'Petit Formal Script', cursive;
+                        font-size:110%;
+                        color: $lightgrey;
+                    }
+
+                    &:last-child {
+                        padding-top:2rem;
+                    }
+                }
+            }
+        }
+    }
+}

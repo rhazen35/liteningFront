@@ -5,7 +5,7 @@
     position:fixed;
     display:flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content:space-between;
     height:3.75rem;
     width:100%;
     top:0;
@@ -46,7 +46,6 @@
     }
 
     app-menu {
-        margin-left:auto;
         padding-right:1rem;
     }
 }

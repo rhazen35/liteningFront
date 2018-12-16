@@ -1,115 +1,101 @@
 @import '../../../scss/styles.scss';
 
 .home {
+    width:100%;
+    margin-bottom:10rem;
 
     .main {
-        display:grid;
-        grid-template-columns: 20% 30% 30% 20%;
-        grid-gap: 2rem;
+        display:flex;
+        flex-flow: column;
+        justify-content: flex-start;
         height:100%;
-        margin-top:2%;
+        margin-top:5rem;
 
-        .title {
-            color: $white;
-            font-family: 'Poppins', sans-serif;
-            font-weight:900;
-            font-size:150%;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        
-        .text {
+        .main-item {
+            flex:1;
+            display:flex;
+            flex-flow:row wrap;
+            justify-content: flex-start;
+            width:75%;
+            margin:0 auto;
+            overflow:hidden;
 
-            p {
-                margin-top:1rem;
-                text-align: left;
-                font-family: 'Questrial', sans-serif;
+            @media (min-width:320px) and (max-width:961px) {margin-bottom:4rem;}
+            @media (min-width:961px) {margin-bottom:2rem;}
+
+            .title {
+                padding-top:2rem;
+                padding-left:2rem;
+                color: $white;
+                font-family: 'Poppins', sans-serif;
+                font-weight:900;
                 font-size:100%;
-                font-weight:500;
-                color: $white;
-                line-height:1.25rem;
-            }
-
-            .link {
-                float:right;
-                margin-top: 1rem;
-                margin-left: 0.25rem;
-                padding: 0.5rem 1rem;
                 text-transform: uppercase;
-                color: $white;
-                background: $JAPANESE_INDIGO;
-                transition: all .2s;
 
-                &:hover {
-                    cursor: pointer;
+                @media (min-width:320px) and (max-width:961px) {text-align: center;}
+                @media (min-width:961px) {text-align: left;}
+            }
+            
+            .text {
+
+                p {
+                    margin-top:1rem;
+                    padding-left:2rem;
+                    text-align: left;
+                    font-family: 'Questrial', sans-serif;
+                    font-size:100%;
+                    font-weight:500;
                     color: $white;
-                    background: $PERSIAN_GREEN;
+                    line-height:1.25rem;
+                }
+
+                .controls {
+                    display:flex;
+                    flex-flow:row wrap;
+                    justify-content:flex-end;
+
+                    .link {
+                        margin-top: 1rem;
+                        margin-right: 0.25rem;
+                        padding: 0.5rem 1rem;
+                        text-transform: uppercase;
+                        color: $white;
+                        background: $JAPANESE_INDIGO;
+                        transition: all .2s;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: $white;
+                            background: $PERSIAN_GREEN;
+                        }
+                    }
                 }
             }
-        }
+            
+            .image {
+                width:30%;
+                @media (min-width:320px) and (max-width:961px) {
+                    margin: 0 auto;
+                }
 
-        img {
-            max-width:100%;
-            max-height:100%;
-        }
-
-        .developer {
-            grid-column: 2/3;
-            grid-row: 1;
-            padding:2rem;
-            color: $white;
-            border-bottom: 1px solid $grey;
-            border-right: 1px solid $grey;
-
-            .title,
-            .text p {
-                text-align: right;
+                img {
+                    @media (min-width:320px) and (max-width:961px) {
+                        max-width:100%;
+                    }
+                    @media (min-width:961px) {
+                        float:right;
+                        width:50%;
+                    }
+                }
             }
-        }
-        
-        .developer-image {
-            grid-column: 3/4;
-            grid-row: 1;
-        }
 
-        .intro {
-            grid-column: 3/4;
-            grid-row: 2;
-            padding:2rem;
-            border-top: 1px solid $grey;
-            border-bottom: 1px solid $grey;
-            border-left: 1px solid $grey;
+            .content {
+                @media (min-width:320px) and (max-width:961px) {width:100%;}
+                @media (min-width:961px) {width:50%;}
 
-            .title,
-            .text p {
-                text-align: left;
+                color: $white;
+                border-top:1px solid $grey;
             }
-        }
-        
-        .intro-image {
-            grid-column: 2/3;
-            grid-row: 2;
-            text-align:right;
-        }
-
-        .content {
-            grid-column: 2/3;
-            grid-row: 3;
-            padding:2rem;
-            background: $JET;
-            border-top: 1px solid $grey;
-            border-right: 1px solid $grey;
-
-            .title,
-            .text p {
-                text-align: right;
-            }
-        }
-
-        .content-image {
-            grid-column: 3/4;
-            grid-row: 3;
-            text-align:left;
         }
     }
 }
