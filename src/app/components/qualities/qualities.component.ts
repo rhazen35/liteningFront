@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-qualities',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QualitiesComponent implements OnInit {
 
-  constructor() { }
+  public show: boolean = false;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  ngAfterViewInit() {
+   
+    this.show = true;
   }
-
 }

@@ -95,6 +95,13 @@
 
                 color: $white;
                 border-top:1px solid $grey;
+
+                animation: 7s fadeIn;
+            }
+
+            .intro {
+                border:none;
+                animation: 1s fadeIn;
             }
         }
     }

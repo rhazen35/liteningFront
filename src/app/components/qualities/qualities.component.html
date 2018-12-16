@@ -1,146 +1,206 @@
 <div class="qualities">
 
-    <div class="page-title"><span>Qualities</span></div>
+	<div class="page-title"><span>Qualities</span></div>
 
-    <div class="subtitle">
-      <i class="material-icons">equalizer</i>
-      <span>What are my areas of expertise?</span>
-    </div>
+	<div class="subtitle">
+		<i class="material-icons">equalizer</i>
+		<span>What are my areas of expertise?</span>
+	</div>
 
-    <div class="areas">
+	<div class="areas">
 
-      <div class="area">
-        <div class="title">
-          <div class="image">
-            <img src="">
-          </div>
-          <div class="subject"></div>
-        </div>
-        <div class="rankings">
-          <div class="ranking">Low</div>
-          <div class="ranking">Medium</div>
-          <div class="ranking">High</div>
-          <div class="ranking">Advanced</div>
-        </div>
-      </div>
+		<div class="area">
+			<div class="title">
+				<div class="image">
+					<img src="">
+				</div>
+				<div class="subject"></div>
+			</div>
+			<div class="rankings">
+				<div class="ranking">Low</div>
+				<div class="ranking">Medium</div>
+				<div class="ranking">High</div>
+				<div class="ranking">Advanced</div>
+			</div>
+		</div>
 
-      <div class="area">
-        <div class="title">
-          <div class="image">
-            <img src="assets/images/programming/html5.png">
-          </div>
-          <div class="subject">HTML5</div>
-        </div>
-        <div class="rankings">
-          <div class="ranking"><i class="material-icons">star</i></div>
-          <div class="ranking"><i class="material-icons">star</i></div>
-          <div class="ranking"><i class="material-icons">star</i></div>
-          <div class="ranking"><i class="material-icons">star</i></div>
-        </div>
-      </div>
+		<div class="area">
+			<div class="title">
+				<div class="image">
+					<img src="assets/images/programming/html5.png">
+				</div>
+				<div class="subject">HTML5</div>
+			</div>
+			<div class="rankings">
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show' : 'hide'">star</i></div>
+			</div>
+		</div>
 
-    <div class="area">
-      <div class="title">
-        <div class="image">
-          <img src="assets/images/programming/css3.png">
-        </div>
-        <div class="subject">CSS3</div>
-      </div>
-      <div class="rankings">
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-      </div>
-    </div>
+		<div class="area">
+			<div class="title">
+				<div class="image animate-right-cubic-ultrafast">
+					<img src="assets/images/programming/css3.png">
+				</div>
+				<div class="subject">CSS3</div>
+			</div>
+			<div class="rankings">
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show2' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show2' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show2' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show2' : 'hide'">star</i></div>
+			</div>
+		</div>
 
-    <div class="area">
-      <div class="title">
-        <div class="image">
-          <img src="assets/images/programming/javascript.png">
-        </div>
-        <div class="subject">Javascript</div>
-      </div>
-      <div class="rankings">
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons"></i></div>
-      </div>
-    </div>
+		<div class="area">
+			<div class="title">
+				<div class="image animate-right-cubic-superfast">
+					<img src="assets/images/programming/javascript.png">
+				</div>
+				<div class="subject">Javascript</div>
+			</div>
+			<div class="rankings">
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show3' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show3' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show3' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show3' : 'hide'"></i></div>
+			</div>
+		</div>
 
-    <div class="area">
-      <div class="title">
-        <div class="image">
-          <img src="assets/images/programming/php.png">
-        </div>
-        <div class="subject">PHP 7+</div>
-      </div>
-      <div class="rankings">
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons"></i></div>
-      </div>
-    </div>
+		<div class="area">
+			<div class="title">
+				<div class="image animate-right-cubic-fast">
+					<img src="assets/images/programming/php.png">
+				</div>
+				<div class="subject">PHP 7+</div>
+			</div>
+			<div class="rankings">
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show4' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show4' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show4' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show4' : 'hide'"></i></div>
+			</div>
+		</div>
 
-    <div class="area">
-      <div class="title">
-        <div class="image">
-          <img src="assets/images/programming/mysql.png">
-        </div>
-        <div class="subject">MySQL</div>
-      </div>
-      <div class="rankings">
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons"></i></div>
-      </div>
-    </div>
+		<div class="area">
+			<div class="title">
+				<div class="image animate-right-cubic-normal">
+					<img src="assets/images/programming/mysql.png">
+				</div>
+				<div class="subject">MySQL</div>
+			</div>
+			<div class="rankings">
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show5' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show5' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show5' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show5' : 'hide'"></i></div>
+			</div>
+		</div>
 
-    <div class="area">
-      <div class="title">
-        <div class="image">
-          <img src="assets/images/programming/xml.png">
-        </div>
-        <div class="subject">XML</div>
-      </div>
-      <div class="rankings">
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons"></i></div>
-      </div>
-    </div>
+		<div class="area">
+			<div class="title">
+				<div class="image animate-right-cubic-slow">
+					<img src="assets/images/programming/xml.png">
+				</div>
+				<div class="subject">XML</div>
+			</div>
+			<div class="rankings">
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show6' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show6' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show6' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show6' : 'hide'"></i></div>
+			</div>
+		</div>
 
-    <div class="area">
-      <div class="title">
-        <div class="image">
-          <img src="assets/images/programming/laravel_icon.png">
-        </div>
-        <div class="subject">Laravel</div>
-      </div>
-      <div class="rankings">
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons"></i></div>
-      </div>
-    </div>
+		<div class="area">
+			<div class="title">
+				<div class="image animate-right-cubic-superslow">
+					<img src="assets/images/programming/laravel_icon.png">
+				</div>
+				<div class="subject">Laravel</div>
+			</div>
+			<div class="rankings">
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show7' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show7' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show7' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show7' : 'hide'"></i></div>
+			</div>
+		</div>
 
-    <div class="area">
-      <div class="title">
-        <div class="image">
-          <img src="assets/images/programming/angular.png">
-        </div>
-        <div class="subject">Angular</div>
-      </div>
-      <div class="rankings">
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons">star</i></div>
-        <div class="ranking"><i class="material-icons"></i></div>
-        <div class="ranking"><i class="material-icons"></i></div>
-      </div>
-    </div>
+		<div class="area">
+			<div class="title">
+				<div class="image animate-right-cubic-ultraslow">
+					<img src="assets/images/programming/angular.png">
+				</div>
+				<div class="subject">Angular</div>
+			</div>
+			<div class="rankings">
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show8' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show8' : 'hide'">star</i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show8' : 'hide'"></i></div>
+				<div class="ranking"><i class="material-icons" [ngClass]="show ? 'show8' : 'hide'"></i></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="extras">
+		<div class="title">
+			Extra's
+		</div>
+
+		<div class="text">
+			<div class="text-item">AGILE with SCRUM</div>
+			<div class="text-item">PHP Excel</div>
+			<div class="text-item">Material Design</div>
+			<div class="text-item">Statistics</div>
+		</div>
+	</div>
+
+	<div class="addition">
+
+		<div class="title">
+			<i class="material-icons">thumbs_up_down</i>
+			<span>Pros and Cons</span>
+		</div>
+
+		<div class="pros">
+			<div class="title">
+				<i class="material-icons">thumb_up</i>
+				<span>Pros</span>
+			</div>
+			<div class="text">
+				<p>
+					When working on a project I find it best to take the time and think about business logic and how 
+					your view is on the matter. There is little use in rushing the project's core functionality for the 
+					sake of a deadline, when later you find important missing pieces that change the core.
+					<br><br>
+					This means that when I work on your project I prefer to have continious communication as well as a 
+					plan that can be communicated upon. The demo section of this website provides a preview of the work 
+					I have done so far on your project. 
+				</p>
+			</div>
+		</div>
+
+		<div class="cons">
+			<div class="title">
+				<i class="material-icons">thumb_down</i>
+				<span>Cons</span>
+			</div>
+			<div class="text">
+				<p>
+					I'm a Web Developer, not a Web Designer.
+					<br><br>
+					A Web Developer builds the backbone of the web solution, using the programming languages ranked
+					above.
+					<br>
+					A Web Designer uses graphic design software such as Adobe Photoshop, Illustrator and InDesign.
+					<br><br>
+					This does not mean I can not build you a good looking web solution, it does mean that I am not the
+					person that will design your logo, nor designing illustrations.
+				</p>
+			</div>
+		</div>
+	</div>
 </div>

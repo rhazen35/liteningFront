@@ -11,6 +11,7 @@
         height:3rem;
         margin-top:3rem;
         padding:1rem;
+        border-bottom: 1px solid $JAPANESE_INDIGO;
 
         i {
             font-size: 38px;
@@ -21,6 +22,7 @@
             line-height:3rem;
         }
     }
+
     .areas {
         display: flex;
         flex-flow:column;
@@ -77,6 +79,145 @@
                     height:3rem;
                     line-height:3.75rem;
                     text-align:center;
+                    font-family: $bungeeInline;
+
+                    @media (min-width:320px) and (max-width:961px) {font-size:90%;}
+
+                    .hide {
+                        color: $JET;
+                    }
+
+                    .show {
+                        color: $white;
+                        transition: color 1s ease-in;
+                        transition-delay: .5s;
+                    }
+
+                    .show2 {
+                        color: $white;
+                        transition: color 1s ease-in;
+                        transition-delay: .6s;
+                    }
+
+                    .show3 {
+                        color: $white;
+                        transition: color 1s ease-in;
+                        transition-delay: .7s;
+                    }
+
+                    .show4 {
+                        color: $white;
+                        transition: color 1s ease-in;
+                        transition-delay: .8s;
+                    }
+
+                    .show5 {
+                        color: $white;
+                        transition: color 1s ease-in;
+                        transition-delay: .9s;
+                    }
+
+                    .show6 {
+                        color: $white;
+                        transition: color 1s ease-in;
+                        transition-delay: 1s;
+                    }
+
+                    .show7 {
+                        color: $white;
+                        transition: color 1s ease-in;
+                        transition-delay: 1.1s;
+                    }
+
+                    .show8 {
+                        color: $white;
+                        transition: color 1s ease-in;
+                        transition-delay: 1.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    .extras {
+        @media (min-width:320px) and (max-width:961px) {width:90%;}
+        @media (min-width:961px) {width:70%;}
+
+        margin: 0 auto;
+        margin-top:1rem;
+
+        .title {
+            font-family: $bungeeInline;
+            font-size: 110%;
+            border-bottom: 1px solid $JAPANESE_INDIGO;
+        }
+
+        .text {
+
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+
+            .text-item {
+                margin:1rem;
+                color: $PERSIAN_GREEN;
+            }
+        }
+    }
+
+    .addition {
+        @media (min-width:320px) and (max-width:961px) {width:90%;}
+        @media (min-width:961px) {width:70%;}
+
+        margin: 0 auto;
+        margin-top:4rem;
+        color: $white;
+
+        .title {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            border-bottom: 1px solid $JAPANESE_INDIGO;
+
+            span {
+                font-family: $bungeeInline;
+                padding-left:0.5rem;
+            }
+
+            i {
+                font-size:28px;
+            }
+        }
+
+        .pros,
+        .cons {
+            margin-top:2rem;
+            margin-bottom:2rem;
+
+            .title {
+                display:flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                height:2rem;
+                border:none;
+
+                span {
+                    line-height:2rem;
+                    padding-left:0.5rem;
+                    font-family: $petitFormal;
+                }
+            }
+
+            .text {
+                margin-top:1rem;
+                border-bottom: 1px solid darken($grey, 30%);
+                font-family: $titiliumWeb;
+
+                p {
+                    width:90%;
+                    margin-top:2rem;
+                    padding-left:2rem;
+                    padding-bottom:1rem;
                 }
             }
         }

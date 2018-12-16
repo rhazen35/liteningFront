@@ -1,6 +1,7 @@
 @import '../../../scss/styles.scss';
 
 .about {
+    margin-bottom:6rem;
 
     .subtitle {
         display:flex;
@@ -8,13 +9,12 @@
         justify-content: center;
         margin-top:6rem;
         color: $white;
+        animation: 15s fadeIn;
 
         .name {
             display:flex;
             flex-flow:row wrap;
             justify-content:center;
-
-            margin-left:1rem;
             font-size:150%;
             text-align:center;
             height:2rem;
@@ -22,7 +22,7 @@
             span {
                 line-height:2rem;
                 padding-left:0.25rem;
-                font-family: 'Bungee Inline', cursive;
+                font-family: $bungeeInline;
             }
 
             i {
@@ -32,19 +32,20 @@
 
         .profession {
             text-align:center;
-            padding-left:3.25rem;
-            font-family: 'Petit Formal Script', cursive;
+            font-family: $petitFormal;
             color: $grey;
             font-size:110%;
         }
     }
 
     .stories {
-
         display:flex;
         flex-flow: row column;
         justify-content: flex-start;
-        width:80%;
+        
+        @media (min-width:320px) and (max-width:961px) {width:80%;}
+        @media (min-width:961px) {width:50%;}
+
         margin: 0 auto;
         margin-top:3rem;
         color: $white;
@@ -52,25 +53,98 @@
         .story {
 
             .title {
-                font-family: 'Bungee Inline', cursive;
+                font-family: $bungeeInline;
                 font-size:110%;
+                border-bottom: 1px solid $JAPANESE_INDIGO;
+            }
+
+            .dates {
+                margin-top:1rem;
+
+                .date {
+                    display:flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+                    padding-top:1rem;
+                    padding-bottom:1rem;
+                    color: $PERSIAN_GREEN;
+                    border-bottom: 1px solid darken($grey, 30%);
+
+                    .year {
+                        flex:1;
+                        padding-right:1rem;
+                        font-family: $petitFormal;
+                        font-size:125%;
+                    }
+
+                    .description {
+                        flex:8;
+                        padding-right:1rem;
+                        font-family: $titiliumWeb;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .hobbies {
+        @media (min-width:320px) and (max-width:961px) {width:80%;}
+        @media (min-width:961px) {width:50%;}
+
+        margin: 0 auto;
+        margin-top: 3rem;
+        color: $white;
+
+        .title {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            font-family: $bungeeInline;
+            border-bottom: 1px solid $JAPANESE_INDIGO;
+        }
+
+        .hobby {
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            margin-top:2rem;
+
+            .title {
+                display:flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                width:100%;
+                height:2rem;
+                margin-top:1rem;
+                font-family: $bungeeInline;
+                border:none;
+
+                span {
+                    line-height:1.5rem;
+                    padding-left:0.5rem;
+                }
             }
 
             .text {
-                margin-top:1rem;
+                padding: 2rem;
+                font-family: $titiliumWeb;
 
-                p {
-                    margin-top:1rem;
-
-                    span {
-                        padding-right:0.5rem;
-                        font-family: 'Petit Formal Script', cursive;
-                        font-size:110%;
-                        color: $lightgrey;
+                .image {
+                    @media (min-width:320px) and (max-width:961px) {
+                        margin: 0 auto;
+                        text-align:center;
+                    }
+                    @media (min-width:961px) {
+                        float:left;
+                        padding-right: 2rem;
                     }
 
-                    &:last-child {
-                        padding-top:2rem;
+                    padding-bottom: 2rem;
+
+                    img {
+                        max-width:10rem;
+                        max-height:10rem;
                     }
                 }
             }
