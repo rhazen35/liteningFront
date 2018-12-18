@@ -4,12 +4,15 @@
     margin-bottom:6rem;
 
     .subtitle {
+        opacity:0;
         display:flex;
         flex-flow: column;
         justify-content: center;
         margin-top:6rem;
         color: $white;
-        animation: 15s fadeIn;
+        animation: 6s fadeIn;
+        animation-delay: .9s;
+        animation-fill-mode: forwards;
 
         .name {
             display:flex;
