@@ -147,6 +147,14 @@
                         max-height:10rem;
                     }
                 }
+
+                a {
+                    color: $PERSIAN_GREEN;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { NgModule } from '@angular/core';
 import { MatNativeDateModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +16,8 @@ import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { QualitiesComponent } from './components/qualities/qualities.component';
+import { DemoComponent } from './components/demo/demo.component';
+import { WorkComponent } from './components/work/work.component';
 
 // Form components
 import { MailFormComponent } from './components/forms/mail-form/mail-form.component';
@@ -27,9 +28,9 @@ import { AgmCoreModule } from '@agm/core';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'demo', component: HomeComponent },
+  { path: 'demo', component: DemoComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'work', component: HomeComponent },
+  { path: 'work', component: WorkComponent },
   { path: 'qualities', component: QualitiesComponent },
   { path: 'contact', component: ContactComponent }
 ];
@@ -44,7 +45,9 @@ const appRoutes: Routes = [
     FooterComponent,
     ContactComponent,
     MailFormComponent,
-    QualitiesComponent
+    QualitiesComponent,
+    DemoComponent,
+    WorkComponent,
   ],
   imports: [
     RouterModule.forRoot(
@@ -66,5 +69,4 @@ const appRoutes: Routes = [
 })
 export class AppModule { }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
 

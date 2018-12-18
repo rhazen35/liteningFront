@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Storm } from '../../../assets/js/storm';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public storm;
 
-  ngOnInit() {
+  constructor() { 
+    this.storm = new Storm();
   }
 
+  ngOnInit() {
+    this.storm.storm();
+  }
 }

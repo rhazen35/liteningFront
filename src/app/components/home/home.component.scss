@@ -90,18 +90,24 @@
             }
 
             .content {
+                opacity:0;
                 @media (min-width:320px) and (max-width:961px) {width:100%;}
                 @media (min-width:961px) {width:50%;}
 
                 color: $white;
                 border-top:1px solid $grey;
 
-                animation: 7s fadeIn;
+                animation: 5s fadeIn;
+                animation-delay: 1.5s;
+                animation-fill-mode: forwards;
             }
 
             .intro {
+                opacity:0;
                 border:none;
                 animation: 1s fadeIn;
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
             }
         }
     }
