@@ -33,7 +33,7 @@ $color2: rgba(59,59,59,.3);
     }
 
     @at-root {
-        @-webkit-keyframes thunder-bg {
+        @keyframes thunder-bg {
             0% {
             background-color: $color1;
             }
@@ -61,7 +61,7 @@ $color2: rgba(59,59,59,.3);
             100% {
             background-color: $color1;
             }
-    }
+        }
     }
 }
 
@@ -79,4 +79,9 @@ canvas {
 
 #canvas1 {
     z-index: 100;
+}
+
+.silenceAfter {
+    animation: 4s fadeOut;
+    animation-fill-mode: forwards;
 }

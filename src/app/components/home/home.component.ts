@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Storm } from '../../../assets/js/storm';
 
 @Component({
@@ -9,13 +8,19 @@ import { Storm } from '../../../assets/js/storm';
 })
 export class HomeComponent implements OnInit {
 
-  public storm;
+  public storm: Storm;
 
   constructor() { 
     this.storm = new Storm();
   }
 
   ngOnInit() {
-    this.storm.storm();
+      this.storm.storm();
+
+      setTimeout(function() {
+        document.getElementById('canvas1').classList.add('silenceAfter');
+        document.getElementById('canvas2').classList.add('silenceAfter');
+        document.getElementById('canvas3').classList.add('silenceAfter');
+      }, 4500);
   }
 }
