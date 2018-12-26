@@ -1,0 +1,92 @@
+@import '../../../scss/styles.scss';
+
+.work {
+    margin-top:5rem;
+    margin-bottom:5rem;
+
+    .title {
+        width:75%;
+        margin: 0 auto;
+        margin-top:2rem;
+        font-family: $bungeeInline;
+        font-size: 110%;
+        color: $white;
+        border-bottom:1px solid $softBlack;
+    }
+
+    .items {
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        .item {
+            display:flex;
+            
+            @media (min-width:320px) and (max-width:961px) {flex-flow: column; text-align:center;}
+            @media (min-width:961px) {flex-flow: row wrap;}
+
+            justify-content: flex-start;
+            height:auto;
+            
+            @media (min-width:320px) and (max-width:961px) {width:90%;}
+            @media (min-width:961px) {width:30%;}
+
+            margin: 3rem;
+            padding:2rem;
+            border: 1px solid $JAPANESE_INDIGO;
+
+            .image {
+                flex:1;
+                height:6rem;
+
+                img {
+                    max-width:100%;
+                    max-height:100%;
+                }
+            }
+
+            .title {
+                flex:1;
+                margin-top:1rem;
+
+                @media (min-width:961px) {margin-left:1rem;}
+
+                color: $white;
+                border:none;
+
+                .header {
+                    font-family: $bungeeInline;
+                    font-size:110%;
+                }
+
+                .text {
+                    margin-top: 0;
+
+                    @media (min-width:320px) and (max-width:961px) {text-align:center;}
+
+                    font-family: $petitFormal;
+                }
+            }
+
+            .text {
+                margin-top:2rem;
+
+                @media (min-width:320px) and (max-width:961px) {text-align:left;}
+
+                font-family: $titiliumWeb;
+                color: $white;
+
+                a {
+                    padding: 0 0.25rem 0 0.25rem;
+                    color: $lightgrey;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

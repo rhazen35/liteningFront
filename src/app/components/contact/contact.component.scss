@@ -1,20 +1,37 @@
 @import '../../../scss/styles.scss';
 
 .contact {
+    width:100%;
     margin-bottom:6rem;
 
-    .information {
-        @media (min-width:320px) and (max-width:961px) {width:90%;}
-        @media (min-width:961px) {width:75%;}
+    .intro {
 
+        display:flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        margin-top:4rem;
+        padding-bottom:1rem;
+        text-align:center;
+        color: $white;
+        border-bottom:1px solid $JAPANESE_INDIGO;
+
+        .title {
+            font-family: $bungeeInline;
+            font-size:110%;
+        }
+
+        .subtitle {
+            font-family: $titiliumWeb;
+        }
+    }
+
+    .information {
+        width:100%;
         margin: 0 auto;
-        margin-top:5rem;
+        margin-top:2rem;
 
         .block {
             color: $white;
-
-            @media (min-width:320px) and (max-width:961px) {padding:1rem;}
-            @media (min-width:961px) {padding:2rem;}
 
             .header {
                 display:flex;
@@ -32,6 +49,15 @@
                 text-align:center;
                 font-size:110%;
                 line-height: 2rem;
+
+                .overlay {
+                    z-index:10000;
+                    background:transparent; 
+                    position:relative; 
+                    width:100%;
+                    @media (min-width:320px) and (max-width:961px) {height:300px; top:300px; margin-top:-300px;}
+                    @media (min-width:961px) {height:600px; top:600px; margin-top:-600px;}
+                 }
             }
         }
 
@@ -51,19 +77,39 @@
         }
 
         .email {
-            margin-top:1rem;
+            margin-top:0.25rem;
+
+            .header {
+                opacity:0;
+                animation: 5s fadeIn;
+                animation-fill-mode: forwards;
+            }
+
+            .content {
+                margin-top:1rem;
+            }
         }
 
         .phone {
-            margin-top:4rem;
-            background: $JAPANESE_INDIGO;
-            width:90%;
+            width:100%;
             margin: 0 auto;
+            margin-top:6rem;
+            background: $JAPANESE_INDIGO;
+            overflow:hidden;
 
             &:hover {
                 animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
                 transform: translate3d(0, 0, 0);
                 backface-visibility: hidden;
+            }
+
+            .header {
+                padding: 2rem;
+                padding-bottom:1rem;
+            }
+
+            .content {
+                padding-bottom:2rem;
             }
         }
 
@@ -73,7 +119,8 @@
             .content {
 
                 agm-map {
-                    height: 600px;
+                    @media (min-width:320px) and (max-width:961px) {height:300px;}
+                    @media (min-width:961px) {height:600px;}
 
                     .info-window {
                         color: $black;

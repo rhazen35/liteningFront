@@ -27,8 +27,8 @@ export class Storm {
             var h = canvas1.height = canvas2.height = canvas3.height = window.innerHeight;
 
             if (w < 2000) {
-                rainthroughnum = 25;
-                rainnum = 25;
+                rainthroughnum = 50;
+                rainnum = 100;
             }
 
             window.addEventListener('resize', function() {

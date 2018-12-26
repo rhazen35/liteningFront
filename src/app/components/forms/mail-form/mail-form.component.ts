@@ -61,20 +61,28 @@ export class MailFormComponent implements OnInit {
     }
   }
 
+  onTextAreaInput(event) {
+    
+    let textarea = event.target;
+
+    textarea.style.height = "";
+    textarea.style.height = Math.min(textarea.scrollHeight, 1000) + "px";
+  }
+
   getSenderErrorMessage() {
-    return this.mailForm.get('sender').hasError('required') ? 'You must enter a value' :
-        this.mailForm.get('sender').hasError('email') ? 'Not a valid email' :
+    return this.mailForm.get('sender').hasError('required') ? 'Enter an email adress.' :
+        this.mailForm.get('sender').hasError('email') ? 'The email is not valid.' :
             '';
   }
 
   getSubjectErrorMessage() {
-    return this.mailForm.get('subject').hasError('required') ? 'You must enter a value' :
+    return this.mailForm.get('subject').hasError('required') ? 'Enter a subject.' :
         this.mailForm.get('subject').value.length < 4 ? 'Minimum length: 4 charaters' :
           this.mailForm.get('subject').value.length > 100 ? 'Maximum length: 100 charaters' : '';
   }
 
   getMessageErrorMessage() {
-    return this.mailForm.get('message').hasError('required') ? 'You must enter a value' : 
+    return this.mailForm.get('message').hasError('required') ? 'Leave your message.' : 
         this.mailForm.get('message').value.length < 4 ? 'Minimum length: 4 charaters' :
           this.mailForm.get('message').value.length > 500 ? 'Maximum length: 500 charaters' : '';
   }

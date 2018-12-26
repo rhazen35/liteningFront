@@ -17,10 +17,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
       this.storm.storm();
 
-      setTimeout(function() {
+      setTimeout(() => {
         document.getElementById('canvas1').classList.add('silenceAfter');
         document.getElementById('canvas2').classList.add('silenceAfter');
         document.getElementById('canvas3').classList.add('silenceAfter');
-      }, 4500);
+      }, 2500);
   }
 }

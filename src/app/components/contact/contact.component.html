@@ -1,15 +1,19 @@
 <div class="contact">
 
-  <div class="page-title"><span>Contact</span></div>
+    <div class="page-title"><span>Contact</span></div>
+
+    <div class="intro">
+        <div class="title">The best way to contact me is by email</div>
+        <div class="subtitle">You will revieve an awnser within 24 hours.</div>
+    </div>
 
   <div class="information">
 
     <div class="block email" (mouseenter)='mailEnter()' (mouseleave)='mailLeave()'>
         <div class="header"><i class="material-icons">{{ mailIcon }}</i></div>
-        <div class="content">rhazen35@gmail.com</div>
+        <div class="content">{{ contactEmail }}</div>
 
         <app-mail-form></app-mail-form>
-
     </div>
 
     <div class="block phone">
@@ -24,6 +28,7 @@
     <div class="block adress">
         <div class="header"><i class="material-icons">home</i></div>
         <div class="content">
+            <div class="overlay" (click)="enableMap($event)"></div>
             <agm-map [zoom]="zoom" [latitude]="lat" [longitude]="lng">
                 <agm-marker [latitude]="lat" [longitude]="lng">
                     <agm-info-window [isOpen]="true">

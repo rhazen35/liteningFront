@@ -1,20 +1,21 @@
 @import '../../../../scss/styles.scss';
 
 form {
-
     display:flex;
     flex-flow:column;
     justify-content: flex-start;
+
+    @media (min-width:320px) and (max-width:961px) {width:90%;}
+    @media (min-width:961px) {width:60%; padding:2rem;}
+
     height:auto;
+    margin: 0 auto;
+    margin-top:1rem;
+    padding-top: 1rem;
+    padding-bottom:1rem;
     color: $black;
     font-size:90%;
     background: $white;
-
-    @media (min-width:320px) and (max-width:961px) {
-        padding:0.25rem;
-        font-size:90%;
-    }
-    @media (min-width:961px) {padding:1rem;}
 
     label {
         display:flex;
@@ -45,6 +46,7 @@ form {
     }
 
     button {
+        margin-top:2rem;
         margin-left:auto;
 
         @media (min-width:320px) and (max-width:961px) {

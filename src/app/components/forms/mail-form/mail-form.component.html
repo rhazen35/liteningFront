@@ -8,7 +8,7 @@
              formControlName="sender"
              tabindex="1" 
              required 
-             placeholder="&nbsp;Your email adress" 
+             placeholder="&nbsp;Email" 
              title="Enter your email adress.">
       <mat-error *ngIf="mailForm.get('sender').invalid">{{getSenderErrorMessage()}}</mat-error>
     </mat-form-field>
@@ -41,11 +41,15 @@
                 title="Leave your message."
                 formControlName="message"
                 minlength="4"
-                maxlength="510"></textarea>
+                maxlength="510"
+                (keyup)="onTextAreaInput($event)"></textarea>
       <mat-error *ngIf="mailForm.get('message').invalid">{{getMessageErrorMessage()}}</mat-error>
       <mat-hint align="end">{{mailForm.get('message').value.length || 0}}/500</mat-hint>
     </mat-form-field>
   </label>
 
-  <button type="submit" mat-button tabindex="4" title="Submit the form and send the message.">Send&nbsp;<mat-icon>send</mat-icon></button>
+  <button type="submit" mat-button tabindex="4" title="Submit the form and send the message.">
+    Send&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-icon>send</mat-icon>
+  </button>
 </form>

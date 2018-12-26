@@ -29,7 +29,7 @@ $color2: rgba(59,59,59,.3);
         @include abs-pos;
         background-color: rgba(0, 0, 0, 0.1);
         z-index: 1;
-        animation: thunder-bg 6s infinite;
+        animation: thunder-bg 1s infinite;
     }
 
     @at-root {
@@ -67,6 +67,7 @@ $color2: rgba(59,59,59,.3);
 
 canvas {
     @include abs-pos;
+    width:100%;
 }
   
 #canvas3 {
@@ -82,6 +83,6 @@ canvas {
 }
 
 .silenceAfter {
-    animation: 4s fadeOut;
+    animation: 1s fadeOut;
     animation-fill-mode: forwards;
 }
