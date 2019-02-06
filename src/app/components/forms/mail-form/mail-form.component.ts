@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { MailServerModule } from '../../../modules/email/server/server.module';
+import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-mail-form',
@@ -10,33 +11,24 @@ import { MailServerModule } from '../../../modules/email/server/server.module';
 })
 
 @NgModule({
-  imports: [
-    MailServerModule
-  ],
-  declarations: [],
+
 })
 
 export class MailFormComponent implements OnInit {
 
   mailForm = new FormGroup({
-    sender: new FormControl(
-      '', 
-      [
+    sender: new FormControl('', [
         Validators.required,
         Validators.email
       ]
     ),
-    subject: new FormControl(
-      '', 
-      [
+    subject: new FormControl('', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(100)
       ]
       ),
-    message: new FormControl(
-      '', 
-      [
+    message: new FormControl('', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(500)
@@ -46,27 +38,27 @@ export class MailFormComponent implements OnInit {
 
   submitted = false;
 
-  constructor() {}
+  constructor(
+      private http: HttpClient
+  ) {
+
+  }
 
   ngOnInit() {
   }
 
-  onSubmit() { 
-
-    this.submitted = true; 
-
+  onSubmit() {
+    this.submitted = true;
     if (this.mailForm.valid) {
 
-      // TODO: Send message.
     }
   }
 
   onTextAreaInput(event) {
-    
-    let textarea = event.target;
+    const textarea = event.target;
 
-    textarea.style.height = "";
-    textarea.style.height = Math.min(textarea.scrollHeight, 1000) + "px";
+    textarea.style.height = '';
+    textarea.style.height = Math.min(textarea.scrollHeight, 1000) + 'px';
   }
 
   getSenderErrorMessage() {
@@ -82,7 +74,7 @@ export class MailFormComponent implements OnInit {
   }
 
   getMessageErrorMessage() {
-    return this.mailForm.get('message').hasError('required') ? 'Leave your message.' : 
+    return this.mailForm.get('message').hasError('required') ? 'Leave your message.' :
         this.mailForm.get('message').value.length < 4 ? 'Minimum length: 4 charaters' :
           this.mailForm.get('message').value.length > 500 ? 'Maximum length: 500 charaters' : '';
   }
